@@ -1,0 +1,113 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+/* Define styles for the default root window element */
+:root {
+  --background-color-primary: #ebebeb;
+  --background-color-secondary: #fafafa;
+  --accent-color: #cacaca;
+  --text-primary-color: #222;
+  --element-size: 6rem;
+}
+
+/* Define styles for the root window with dark - mode preference */
+:root.dark-theme {
+  --background-color-primary: #1e1e1e;
+  --background-color-secondary: #2d2d30;
+  --accent-color: #3f3f3f;
+  --text-primary-color: #ddd;
+}
+
+p {
+  color: var(--text-primary-color);
+}
+
+body{
+  background-color: var(--background-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+    margin: 2rem auto;
+    height: 100vh;
+    width: 100vw;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  #app h1 {
+   text-align: center;
+  }
+  #app p{
+    text-align: left;
+  }
+  
+  #nav {
+    padding: 30px;
+  }
+  
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
+  section{
+      margin: 2rem auto;
+  }
+  .row{
+      text-align: center;
+      align-items: center;
+  }
+  .row span, .btn-outline-primary{
+    font-weight: bold;
+  }
+  #nombre{
+    text-transform: capitalize;
+  }
+
+  .switch-checkbox {
+    display: none;
+  }
+  
+  .switch-label {
+    align-items: center;
+    background: var(--text-primary-color);
+    border: calc(var(--element-size) * 0.025) solid var(--accent-color);
+    border-radius: var(--element-size);
+    cursor: pointer;
+    display: flex;
+    font-size: calc(var(--element-size) * 0.3);
+    height: calc(var(--element-size) * 0.35);
+    position: relative;
+    padding: calc(var(--element-size) * 0.1);
+    transition: var(--text-primary-color) 0.5s ease;
+    justify-content: space-between;
+    width: var(--element-size);
+    z-index: 1;
+  }
+  
+  .switch-toggle {
+    position: absolute;
+    background-color: var(--background-color-primary);
+    /* background-color: lawngreen; */
+    border-radius: 50%;
+    top: calc(var(--element-size) * 0.002);
+    left : calc(var(--element-size) * 0.03);
+    height: calc(var(--element-size) * 0.29);
+    width: calc(var(--element-size) * 0.3);
+    transform: translateX(0);
+    transition: transform 0.3s ease, background-color 0.5s ease;
+  }
+  
+  .switch-toggle-checked {
+    transform: translateX(calc(var(--element-size) * 0.6)) !important;
+  }
